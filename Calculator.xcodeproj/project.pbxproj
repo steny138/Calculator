@@ -21,6 +21,7 @@
 		67C59A7B18A5ED9B00DCAA14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C59A5D18A5ED9B00DCAA14 /* UIKit.framework */; };
 		67C59A8318A5ED9C00DCAA14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67C59A8118A5ED9C00DCAA14 /* InfoPlist.strings */; };
 		67C59A8518A5ED9C00DCAA14 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C59A8418A5ED9C00DCAA14 /* CalculatorTests.m */; };
+		67C59A9018A618C300DCAA14 /* STModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C59A8F18A618C300DCAA14 /* STModal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		67C59A8018A5ED9C00DCAA14 /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		67C59A8218A5ED9C00DCAA14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67C59A8418A5ED9C00DCAA14 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		67C59A8E18A618C300DCAA14 /* STModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModal.h; sourceTree = "<group>"; };
+		67C59A8F18A618C300DCAA14 /* STModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				67C59A6B18A5ED9B00DCAA14 /* Main.storyboard */,
 				67C59A6E18A5ED9B00DCAA14 /* STViewController.h */,
 				67C59A6F18A5ED9B00DCAA14 /* STViewController.m */,
+				67C59A8E18A618C300DCAA14 /* STModal.h */,
+				67C59A8F18A618C300DCAA14 /* STModal.m */,
 				67C59A7118A5ED9B00DCAA14 /* Images.xcassets */,
 				67C59A6018A5ED9B00DCAA14 /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C59A9018A618C300DCAA14 /* STModal.m in Sources */,
 				67C59A7018A5ED9B00DCAA14 /* STViewController.m in Sources */,
 				67C59A6618A5ED9B00DCAA14 /* main.m in Sources */,
 				67C59A6A18A5ED9B00DCAA14 /* STAppDelegate.m in Sources */,
@@ -461,6 +467,7 @@
 				67C59A8A18A5ED9C00DCAA14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67C59A8B18A5ED9C00DCAA14 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +476,7 @@
 				67C59A8D18A5ED9C00DCAA14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
