@@ -20,10 +20,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"log10(77) = %f , log10(777) = %f ,log10(8888) = %f",ceil(log10(77)),ceil(log10(777)),ceil(log10(10001)));
     modalNum = [[STModal alloc]init];
+    
     for (UIButton * btn in [self.buttonsVIew subviews]) {
         [btn addTarget:self action:@selector(CalculatorClick:) forControlEvents:UIControlEventTouchUpInside];
+        btn.layer.borderWidth =1 ;
+        btn.layer.borderColor = [UIColor colorWithRed:155/255.0 green:205.0/255.0 blue:205.0/255.0 alpha:1.0].CGColor;
+        //[btn setBackgroundColor:[UIColor colorWithRed:205/255.0 green:205.0/255.0 blue:205.0/255.0 alpha:1.0]];
+        [btn setTintColor:[UIColor colorWithRed:0/255.0 green:114/255.0 blue:227/255.0 alpha:1.0]];
     }
 }
 
