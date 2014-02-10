@@ -10,6 +10,7 @@
 
 
 typedef enum Symbols{
+    NoSymbol=0,
     AmountSymbol = 20,
     PlusSymbol,
     MinusSymbol,

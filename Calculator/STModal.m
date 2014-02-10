@@ -16,14 +16,12 @@
     if(self)
     {
         trueNum = 0 ;
-        
+        currentSymbol = NoSymbol;
         isPoint = NO;
         integer = 0;
         fraction =0;
         
         numFormatter = [[NSNumberFormatter alloc]init];
-        //[numFormatter setDecimalSeparator:@"###.###"];
-        
     }
     return self;
 }
@@ -53,10 +51,10 @@
 {
     if (isPoint) {
         fracLength++;
-        fraction = fraction* 10 + number;
+        fraction = fraction * 10 + number;
     }
     else
-        integer = integer*10+ number;
+        integer = integer * 10 + number;
 }
 -(void)clickSymbol:(Symbols)symbol
 {
@@ -87,6 +85,7 @@
             integer =0;
             fraction =0;
             isPoint = NO;
+            currentSymbol = NoSymbol;
             break;
         }
         case PointSymbol:
@@ -96,9 +95,12 @@
         }
         default:
         {
+            if(currentSymbol != NoSymbol)
+                tempNum = [self caluteNumber:tempNum number:trueNum symbol:currentSymbol];
+            else
+                tempNum = trueNum ;
             currentSymbol = symbol;
             isPoint = NO;
-            tempNum = trueNum;
             trueNum = 0;
             fraction = 0;
             integer = 0;
@@ -108,16 +110,6 @@
 }
 -(void)setNumber
 {
-    /*long posNum =ceil(log10(fraction));
-    double tempPow =pow(10,posNum);
-    if (fraction ==0) {
-        posNum = 1 ;
-    }
-    else {
-        double modNUm = fmod(fraction, tempPow);
-        if (modNUm == 0)
-            posNum++;
-    }*/
     trueNum = integer + (fraction* pow(0.1,fracLength));
 }
 -(double)caluteNumber:(double)num1 number:(double)num2 symbol:(Symbols)symbol
